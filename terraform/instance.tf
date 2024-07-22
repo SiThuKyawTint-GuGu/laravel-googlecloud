@@ -41,6 +41,11 @@ resource "google_compute_instance" "default" {
     sudo apt-get install -y php8.2 php8.2-cli php8.2-fpm php8.2-mysql php8.2-xml php8.2-mbstring git
     lsb_release -cs
     sudo update-alternatives --set php /usr/bin/php8.2
+    sudo apt-get update
+    sudo apt-get install php-zip
+    sudo apt-get install unzip
+    php --ini
+    sudo apt-get install php-sqlite3
 
     # Install Composer
     curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
@@ -50,9 +55,11 @@ resource "google_compute_instance" "default" {
     sudo apt-get install -y nodejs git
 
     # Clone the repository and set permissions
-    sudo git clone https://github.com/SiThuKyawTint-GuGu/laravel-gcp.git /home/guguskyler/laravel-app
+    sudo git clone https://github.com/SiThuKyawTint-GuGu/laravel-googlecloud.git /home/guguskyler/laravel-app
     sudo chown -R guguskyler:guguskyler /home/guguskyler/laravel-app
     sudo chmod -R 755 /home/guguskyler/laravel-app
+    chmod 664 /home/guguskyler/laravel-app/database/database.sqlite
+    touch /home/guguskyler/laravel-app/database/database.sqlite
 
     # Install dependencies and start the app
     cd /home/guguskyler/laravel-app

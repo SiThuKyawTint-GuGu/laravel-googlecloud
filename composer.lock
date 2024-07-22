@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e8c3c14ff33b199b4a0838993eb8423",
+    "content-hash": "bc0324830c78b8fdd7519f9a9ae78d95",
     "packages": [
         {
             "name": "brick/math",
@@ -3107,6 +3107,40 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "structurize/structurize",
+            "version": "v0.1.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/structurize/structurize.git",
+                "reference": "358537f931c814a8fdec0d0073fba10f8ff3b590"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/structurize/structurize/zipball/358537f931c814a8fdec0d0073fba10f8ff3b590",
+                "reference": "358537f931c814a8fdec0d0073fba10f8ff3b590",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Structurize\\Structurize\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Dieter Coopman",
+                    "email": "dieter@deltasolutions.be"
+                }
+            ],
+            "description": "This package serves as a tool to seamlessly connect with the Structurize API.",
+            "support": {
+                "issues": "https://github.com/structurize/structurize/issues",
+                "source": "https://github.com/structurize/structurize/tree/v0.1.17"
+            },
+            "time": "2024-05-07T19:23:33+00:00"
         },
         {
             "name": "symfony/clock",
