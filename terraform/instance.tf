@@ -64,6 +64,8 @@ resource "google_compute_instance" "default" {
     # Install dependencies and start the app
     cd /home/guguskyler/laravel-app
     composer install
+    php artisan key:generate
+    php artisan migrate
     php artisan serve --host=0.0.0.0 --port=8000
    SCRIPT
 }
